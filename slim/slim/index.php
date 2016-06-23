@@ -51,14 +51,21 @@ $app->post(
 	'/addUser',
 	function () {
 		$data = array('userId' => 2, 'firstName' => "jon", "lastName" => "doe", "phone" => '32132131');
-		return _writeData(DEFAULT_PATH . "/user/", $data, 'POST', $options);
+		return _writeData(DEFAULT_PATH . "/user", $data, 'POST', $options);
 	}
 );
 $app->post(
 	'/addOrder',
 	function () {
 		$data = array('userId' => 2, 'orderId' => "2", "orderStatus" => "1", "ordertotal" => '321');
-		return _writeData(DEFAULT_PATH . "/order/", $data, 'POST', $options);
+		return _writeData(DEFAULT_PATH . "/order", $data, 'POST', $options);
+	}
+);
+$app->post(
+	'/orderStatusChange',
+	function () {
+		$data = array("orderStatus" => "2");
+		return _writeData(DEFAULT_PATH . "/order/orderStatus", "2", 'PUT', $options);
 	}
 );
 
