@@ -4,30 +4,51 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit75cae706a6c338d4ae11382d9d65fa9d
+class ComposerStaticInit46a36a93cb78d8e7d0dfef4fac8ec020
 {
+    public static $prefixLengthsPsr4 = array (
+        'F' => 
+        array (
+            'Firebase\\Token\\' => 15,
+            'Firebase\\JWT\\' => 13,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Firebase\\Token\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/token-generator/src',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
+    );
+
     public static $prefixesPsr0 = array (
         'S' => 
         array (
             'Slim' => 
             array (
-                0 => __DIR__ . '/..' . '/slim',
+                0 => __DIR__ . '/..' . '/slim/slim',
             ),
         ),
     );
 
     public static $classMap = array (
-        'Firebase\\Error' => __DIR__ . '/..' . '/slim/firebase-php/src/firebaseStub.php',
-        'Firebase\\FirebaseInterface' => __DIR__ . '/..' . '/slim/firebase-php/src/firebaseInterface.php',
-        'Firebase\\FirebaseLib' => __DIR__ . '/..' . '/slim/firebase-php/src/firebaseLib.php',
-        'Firebase\\FirebaseStub' => __DIR__ . '/..' . '/slim/firebase-php/src/firebaseStub.php',
+        'Firebase\\Error' => __DIR__ . '/..' . '/ktamas77/firebase-php/src/firebaseStub.php',
+        'Firebase\\FirebaseInterface' => __DIR__ . '/..' . '/ktamas77/firebase-php/src/firebaseInterface.php',
+        'Firebase\\FirebaseLib' => __DIR__ . '/..' . '/ktamas77/firebase-php/src/FirebaseLib.php',
+        'Firebase\\FirebaseStub' => __DIR__ . '/..' . '/ktamas77/firebase-php/src/firebaseStub.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixesPsr0 = ComposerStaticInit75cae706a6c338d4ae11382d9d65fa9d::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit75cae706a6c338d4ae11382d9d65fa9d::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit46a36a93cb78d8e7d0dfef4fac8ec020::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit46a36a93cb78d8e7d0dfef4fac8ec020::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit46a36a93cb78d8e7d0dfef4fac8ec020::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit46a36a93cb78d8e7d0dfef4fac8ec020::$classMap;
 
         }, null, ClassLoader::class);
     }

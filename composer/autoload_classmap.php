@@ -6,8 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Firebase\\Error' => $vendorDir . '/slimExe/firebase-php/src/firebaseStub.php',
-    'Firebase\\FirebaseInterface' => $vendorDir . '/slimExe/firebase-php/src/firebaseInterface.php',
-    'Firebase\\FirebaseLib' => $vendorDir . '/slimExe/firebase-php/src/firebaseLib.php',
-    'Firebase\\FirebaseStub' => $vendorDir . '/slimExe/firebase-php/src/firebaseStub.php',
+    'Firebase\\Error' => $vendorDir . '/ktamas77/firebase-php/src/firebaseStub.php',
+    'Firebase\\FirebaseInterface' => $vendorDir . '/ktamas77/firebase-php/src/firebaseInterface.php',
+    'Firebase\\FirebaseLib' => $vendorDir . '/ktamas77/firebase-php/src/FirebaseLib.php',
+    'Firebase\\FirebaseStub' => $vendorDir . '/ktamas77/firebase-php/src/firebaseStub.php',
 );
